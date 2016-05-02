@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aUl-lf-jzM">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="V3B-iJ-7Sp">
+            <objects>
+                <tabBarController id="aUl-lf-jzM" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="cXo-9E-pa6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="4a9-O5-TFe" kind="relationship" relationship="viewControllers" id="uAj-M4-x1Q"/>
+                        <segue destination="2YT-Uz-rWP" kind="relationship" relationship="viewControllers" id="D3U-G6-dqQ"/>
+                        <segue destination="dGr-Wx-P8F" kind="relationship" relationship="viewControllers" id="9dy-mY-Bz7"/>
+                        <segue destination="Pcu-e1-waA" kind="relationship" relationship="viewControllers" id="WIO-NP-4e7"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1rU-6z-HKW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="737" y="-31"/>
+        </scene>
+        <!--Sync-->
+        <scene sceneID="0EP-Gt-CYk">
+            <objects>
+                <viewController id="4a9-O5-TFe" customClass="SyncTaskViewController" customModule="AsyncTasks" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Srg-0o-Gg5"/>
+                        <viewControllerLayoutGuide type="bottom" id="pjv-ca-ulv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="94z-vG-tfA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXd-cb-FtV">
+                                <rect key="frame" x="252" y="285" width="96" height="30"/>
+                                <state key="normal" title="Fetch Remote"/>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="177" y="20" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="fetch:" destination="4a9-O5-TFe" eventType="touchUpInside" id="fJ8-OD-my1"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="hMl-l6-LuV">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CXd-cb-FtV" firstAttribute="centerY" secondItem="94z-vG-tfA" secondAttribute="centerY" id="62k-pZ-PmE"/>
+                            <constraint firstItem="CXd-cb-FtV" firstAttribute="centerX" secondItem="94z-vG-tfA" secondAttribute="centerX" id="LDW-Sp-W2M"/>
+                            <constraint firstItem="hMl-l6-LuV" firstAttribute="centerY" secondItem="94z-vG-tfA" secondAttribute="centerY" id="mki-je-DwA"/>
+                            <constraint firstItem="hMl-l6-LuV" firstAttribute="centerX" secondItem="94z-vG-tfA" secondAttribute="centerX" id="ub0-rS-3SC"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Sync" id="vEg-yc-SZv"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="hMl-l6-LuV" id="3Jp-w4-8Of"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EWp-Kw-4Vc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1529" y="-808"/>
+        </scene>
+        <!--Async Delegate-->
+        <scene sceneID="o8r-3t-RYY">
+            <objects>
+                <viewController id="dGr-Wx-P8F" customClass="AsyncDelegateTaskViewController" customModule="AsyncTasks" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bEA-4n-7em"/>
+                        <viewControllerLayoutGuide type="bottom" id="c4u-Vt-cWa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BQD-Qj-7sW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="554-VO-1yf">
+                                <rect key="frame" x="252" y="285" width="96" height="30"/>
+                                <state key="normal" title="Fetch Remote"/>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="177" y="20" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="fetch:" destination="2YT-Uz-rWP" eventType="touchUpInside" id="0dT-Iv-aD4"/>
+                                    <action selector="fetch:" destination="dGr-Wx-P8F" eventType="touchUpInside" id="oaa-aR-g8q"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="BAn-Rk-kEJ">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="554-VO-1yf" firstAttribute="centerY" secondItem="BQD-Qj-7sW" secondAttribute="centerY" id="Aqo-7s-lxg"/>
+                            <constraint firstItem="BAn-Rk-kEJ" firstAttribute="centerY" secondItem="BQD-Qj-7sW" secondAttribute="centerY" id="FRV-Z1-a9p"/>
+                            <constraint firstItem="554-VO-1yf" firstAttribute="centerX" secondItem="BQD-Qj-7sW" secondAttribute="centerX" id="R45-jj-GPO"/>
+                            <constraint firstItem="BAn-Rk-kEJ" firstAttribute="centerX" secondItem="BQD-Qj-7sW" secondAttribute="centerX" id="pph-1q-tof"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Async Delegate" id="1ZY-sm-oZO"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="BAn-Rk-kEJ" id="uuE-Tw-koa"/>
+                        <outlet property="fetchButton" destination="554-VO-1yf" id="5Hw-1U-hfH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yvI-Gm-BiZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2307" y="-307"/>
+        </scene>
+        <!--Async Notification-->
+        <scene sceneID="pgO-8d-pwO">
+            <objects>
+                <viewController id="Pcu-e1-waA" customClass="AsyncNotificationTaskViewController" customModule="AsyncTasks" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="enG-jh-gkF"/>
+                        <viewControllerLayoutGuide type="bottom" id="QVi-sr-ymv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Do-Eq-wbn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEV-Kz-vv2">
+                                <rect key="frame" x="252" y="285" width="96" height="30"/>
+                                <state key="normal" title="Fetch Remote"/>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="177" y="20" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="fetch:" destination="Pcu-e1-waA" eventType="touchUpInside" id="6b0-T0-koW"/>
+                                    <action selector="fetch:" destination="2YT-Uz-rWP" eventType="touchUpInside" id="Cd1-5h-uNf"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="G4n-0r-WXc">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G4n-0r-WXc" firstAttribute="centerX" secondItem="0Do-Eq-wbn" secondAttribute="centerX" id="4XG-HE-Klu"/>
+                            <constraint firstItem="iEV-Kz-vv2" firstAttribute="centerY" secondItem="0Do-Eq-wbn" secondAttribute="centerY" id="cos-zJ-fpv"/>
+                            <constraint firstItem="G4n-0r-WXc" firstAttribute="centerY" secondItem="0Do-Eq-wbn" secondAttribute="centerY" id="sL0-9k-Pfo"/>
+                            <constraint firstItem="iEV-Kz-vv2" firstAttribute="centerX" secondItem="0Do-Eq-wbn" secondAttribute="centerX" id="vVX-ai-PBm"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Async Notification" id="cCm-pb-Lqk"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="G4n-0r-WXc" id="buc-7P-IWu"/>
+                        <outlet property="fetchButton" destination="iEV-Kz-vv2" id="NAi-iE-4Hq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OZT-iT-zFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2423" y="470"/>
+        </scene>
+        <!--Async Callback-->
+        <scene sceneID="0Ec-Br-x1G">
+            <objects>
+                <viewController id="2YT-Uz-rWP" customClass="AsyncCallbackTaskViewController" customModule="AsyncTasks" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xr1-dx-ymB"/>
+                        <viewControllerLayoutGuide type="bottom" id="ejC-XV-VMS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I8L-UH-m4p">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eiq-Xj-LGR">
+                                <rect key="frame" x="252" y="285" width="96" height="30"/>
+                                <state key="normal" title="Fetch Remote"/>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="177" y="20" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="fetch:" destination="2YT-Uz-rWP" eventType="touchUpInside" id="r7O-r9-9rd"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="run-jf-SJA">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Eiq-Xj-LGR" firstAttribute="centerX" secondItem="I8L-UH-m4p" secondAttribute="centerX" id="24k-TJ-6w7"/>
+                            <constraint firstItem="run-jf-SJA" firstAttribute="centerY" secondItem="I8L-UH-m4p" secondAttribute="centerY" id="QAc-Oc-MPw"/>
+                            <constraint firstItem="Eiq-Xj-LGR" firstAttribute="centerY" secondItem="I8L-UH-m4p" secondAttribute="centerY" id="fBG-Bm-ECF"/>
+                            <constraint firstItem="run-jf-SJA" firstAttribute="centerX" secondItem="I8L-UH-m4p" secondAttribute="centerX" id="tW2-eV-2o4"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Async Callback" id="2ax-8D-RAE"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="run-jf-SJA" id="9P9-z4-492"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="egb-NA-iZw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1599" y="908"/>
+        </scene>
+    </scenes>
+</document>

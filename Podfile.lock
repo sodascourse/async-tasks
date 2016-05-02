@@ -1,0 +1,15 @@
+PODS:
+  - AsyncSwift (1.7.2)
+  - SwiftyJSON (2.3.2)
+
+DEPENDENCIES:
+  - AsyncSwift (~> 1.7)
+  - SwiftyJSON (~> 2.3)
+
+SPEC CHECKSUMS:
+  AsyncSwift: 46a78bceb11f0e5bb52747f740d9692ec78d2d7c
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+
+PODFILE CHECKSUM: 1fc5bfa4e18151f09dbee6aa5e6041e5ec7cfb5b
+
+COCOAPODS: 1.0.0.beta.8
